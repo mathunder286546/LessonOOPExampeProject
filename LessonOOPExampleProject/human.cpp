@@ -1,4 +1,4 @@
-#include "student.h"
+#include "Human.h"
 
 
 
@@ -27,11 +27,11 @@ Human::~Human() {
 	//cout << "destructor" << endl;
 }
 
-string Student::getName() {
+string Human::getName() {
 	return name;
 }
 
-void Student::setName(string n) {
+void Human::setName(string n) {
 	name = n;
 }
 
@@ -39,38 +39,28 @@ string Student::getSurname() {
 	return surname;
 }
 
-void Student::setSurname(string n) {
+void Human::setSurname(string n) {
 	surname = n;
 }
 
-int Student::getAge() {
+int Human::getAge() {
 	return age;
 }
 
-void Student::setAge(int a) {
+void Human::setAge(int a) {
 	if (a > 0 && a < 110) {
 		age = a;
 	}
 }
 
-float Student::getAvgMark() {
-	return avg_mark;
-}
 
-void Student::setAvgMark(float mark) {
-	if (mark >= 0 && mark <= 10) {
-		avg_mark = mark;
-	}
-}
 
-void Student::clear() {
-	name = "no name";
-	surname = "no surname";
-	age = 0;
-	avg_mark = 0;
-}
 
-string Student::convert() {
+
+
+
+
+string Human::convert() {
 	string msg = "";
 	msg += name;
 	msg += " " + surname;
